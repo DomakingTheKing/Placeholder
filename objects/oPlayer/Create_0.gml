@@ -7,5 +7,7 @@ ySpd = 0;
 //Jumping
 grav = .275; // .275 pixels per frame
 termVel = 5; // acceleration cap
-jSpd = -6.15;
+jSpd = -4.15;
+maxJumpTime = 15; // Maximum duration the jump can be held
+jumpTime = 0;
 
