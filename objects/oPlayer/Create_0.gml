@@ -39,5 +39,5 @@ ySpd = 0;
 	coyoteHangFrames = 2;
 	coyoteHangTimer = 0;
 	//Jump buffer time
-	coyoteJumpFrames = 50;
+	coyoteJumpFrames = 10;
 	coyoteJumpTimer = 0;	
