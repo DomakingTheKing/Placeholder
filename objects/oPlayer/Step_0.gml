@@ -9,17 +9,29 @@ moveDir = rightKey - leftKey;
 xSpd = moveDir * moveSpd;
 
 // X Collisions
-var _subPixel = 0.5; // How close the player can get to something tangible
+var _subPixel = .5; // How close the player can get to something tangible
 
 if (place_meeting(x + xSpd, y, oWall)) {
-    // Scoot up to wall precisely
-    var _pixelCheck = _subPixel * sign(xSpd);
-    while (!place_meeting(x + _pixelCheck, y, oWall)) {
-        x += _pixelCheck;
-    }
+    
+	//Firt check if there is a slope to go up
+	if !place_meeting(x + xSpd, y - abs(xSpd)-1, oWall){
+	
+		while (place_meeting(x + xSpd, y, oWall)) {
+			y -= _subPixel;
+		}
+	} else
+		{
+	
+		// Scoot up to wall precisely
+		var _pixelCheck = _subPixel * sign(xSpd);
+		while (!place_meeting(x + _pixelCheck, y, oWall)) {
+			x += _pixelCheck;
+		}
 
-    // Set xSpd to zero to "collide"
-    xSpd = 0;
+		// Set xSpd to zero to "collide"
+		xSpd = 0;
+	
+		}
 }
 
 // Move
