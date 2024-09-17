@@ -17,13 +17,13 @@ controlsSetup();
 
 //Moving
 moveDir = 0; // 0 = still, -1 = sx, 1 = dx
-moveSpd = 3;
+moveSpd = 2;
 xSpd = 0;
 ySpd = 0;
 
 //Jumping
 	grav = .275; // .275 pixels per frame
-	termVel = 5; // acceleration cap
+	termVel = 4; // acceleration cap
 	onGround = true;
 	jumpMax = 2;
 	jumpCount = 0;
@@ -41,3 +41,6 @@ ySpd = 0;
 	//Jump buffer time
 	coyoteJumpFrames = 10;
 	coyoteJumpTimer = 0;	
+	
+	framesbo =10;
+	timerbo =0;

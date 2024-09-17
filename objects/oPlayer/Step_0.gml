@@ -120,18 +120,20 @@ if (ySpd <= 0){
 		var _slopeSide=false;
 		//Jump into soped ceilings
 		//lide UpLeft slope
-		if moveDir == 0 && !place_meeting(x - abs(ySpd)-1, y + ySpd, oWall){
+		if xSpd == 0 && !place_meeting(x - abs(ySpd)-1, y + ySpd, oWall) && timerbo!=framesbo{
 			while place_meeting(x, y + ySpd, oWall){
 				x -= 1;
 				_slopeSide=true;
 			}
+			timerbo++;
 		}
 		
-		if moveDir == 0 && !place_meeting(x + abs(ySpd)+1, y + ySpd, oWall){
+		if xSpd == 0 && !place_meeting(x + abs(ySpd)+1, y + ySpd, oWall)  && timerbo!=framesbo{
 			while place_meeting(x, y + ySpd, oWall){
 				x += 1;
 				_slopeSide=true;
 			}
+			timerbo++;			
 		}
 	
 	if !_slopeSide{
@@ -142,9 +144,9 @@ if (ySpd <= 0){
 	    }
 
 	    // Bonk code(OPTIONAL)
-	    //if (ySpd < 0) {
-	    //    jumpHoldTimer = 0;
-	    //}
+	    if (ySpd < 0) {
+	       jumpHoldTimer = 0;
+	    }
 
 	    // Set ySpd to zero to "collide"
 	    ySpd = 0;
@@ -164,9 +166,9 @@ if (ySpd >= 0){
 	    }
 
 	    // Bonk code(OPTIONAL)
-	    //if (ySpd < 0) {
-	    //    jumpHoldTimer = 0;
-	    //}
+	    if (ySpd < 0) {
+	        jumpHoldTimer = 0;
+	    }
 
 	    // Set ySpd to zero to "collide"
 	    ySpd = 0;
@@ -175,6 +177,7 @@ if (ySpd >= 0){
 	// Set if on ground
 	if (place_meeting(x, y + 1, oWall)) {
 	    setOnGround(true);
+		timerbo=0;
 } 
 }
 // Move
