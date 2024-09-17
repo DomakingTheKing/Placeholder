@@ -9,17 +9,43 @@ moveDir = rightKey - leftKey;
 xSpd = moveDir * moveSpd;
 
 // X Collisions
-var _subPixel = 0.5; // How close the player can get to something tangible
+var _subPixel = .5; // How close the player can get to something tangible
 
 if (place_meeting(x + xSpd, y, oWall)) {
-    // Scoot up to wall precisely
-    var _pixelCheck = _subPixel * sign(xSpd);
-    while (!place_meeting(x + _pixelCheck, y, oWall)) {
-        x += _pixelCheck;
-    }
+    
+	//Firt check if there is a slope to go up
+	if !place_meeting(x + xSpd, y - abs(xSpd)-1, oWall){
+	
+		while (place_meeting(x + xSpd, y, oWall)) {
+			y -= _subPixel;
+		}
+	} else
+		{
+		//ceiling collision
+			if !place_meeting(x + xSpd, y + abs(xSpd)+1, oWall){
+	
+				while (place_meeting(x + xSpd, y, oWall)) {
+					y += _subPixel;
+				}
+			}
+			else{
+				// Scoot up to wall precisely
+				var _pixelCheck = _subPixel * sign(xSpd);
+				if(!place_meeting(x + _pixelCheck, y, oWall)) {
+					x += _pixelCheck;
+				}
 
-    // Set xSpd to zero to "collide"
-    xSpd = 0;
+				// Set xSpd to zero to "collide"
+				xSpd = 0;
+			}
+		}
+}
+
+//go down slopes
+if ySpd >=0 && !place_meeting(x+xSpd,y+1,oWall) && place_meeting(x + xSpd, y + abs(xSpd) +1, oWall){
+		while (!place_meeting(x + xSpd, y+_subPixel, oWall)) {
+			y += _subPixel;
+		}
 }
 
 // Move
@@ -86,26 +112,70 @@ if (ySpd > termVel) {
 }
 
 var _subPixel = 0.5;
-if (place_meeting(x, y + ySpd, oWall)) {
-    // Scoot up to wall precisely
-    var _pixelCheck = _subPixel * sign(ySpd);
-    while (!place_meeting(x, y + _pixelCheck, oWall)) {
-        y += _pixelCheck;
-    }
 
-    // Bonk code
-    if (ySpd < 0) {
-        jumpHoldTimer = 0;
-    }
+//upwors y collison
+if (ySpd <= 0){ 
+	if ySpd < 0 && place_meeting(x,y + ySpd, oWall){
+		
+		var _slopeSide=false;
+		//Jump into soped ceilings
+		//lide UpLeft slope
+		if moveDir == 0 && !place_meeting(x - abs(ySpd)-1, y + ySpd, oWall){
+			while place_meeting(x, y + ySpd, oWall){
+				x -= 1;
+				_slopeSide=true;
+			}
+		}
+		
+		if moveDir == 0 && !place_meeting(x + abs(ySpd)+1, y + ySpd, oWall){
+			while place_meeting(x, y + ySpd, oWall){
+				x += 1;
+				_slopeSide=true;
+			}
+		}
+	
+	if !_slopeSide{
+	    // Scoot up to wall precisely
+	    var _pixelCheck = _subPixel * sign(ySpd);
+	    while (!place_meeting(x, y + _pixelCheck, oWall)) {
+	        y += _pixelCheck;
+	    }
 
-    // Set ySpd to zero to "collide"
-    ySpd = 0;
+	    // Bonk code(OPTIONAL)
+	    //if (ySpd < 0) {
+	    //    jumpHoldTimer = 0;
+	    //}
+
+	    // Set ySpd to zero to "collide"
+	    ySpd = 0;
+	}
+  }
 }
 
-// Set if on ground
-if (ySpd >= 0 && place_meeting(x, y + 1, oWall)) {
-    setOnGround(true);
-} 
+//downwars y collison
+if (ySpd >= 0){ 
+	
+	
+	if (place_meeting(x, y + ySpd, oWall)) {
+	    // Scoot up to wall precisely
+	    var _pixelCheck = _subPixel * sign(ySpd);
+	    while (!place_meeting(x, y + _pixelCheck, oWall)) {
+	        y += _pixelCheck;
+	    }
 
+	    // Bonk code(OPTIONAL)
+	    //if (ySpd < 0) {
+	    //    jumpHoldTimer = 0;
+	    //}
+
+	    // Set ySpd to zero to "collide"
+	    ySpd = 0;
+	}
+
+	// Set if on ground
+	if (place_meeting(x, y + 1, oWall)) {
+	    setOnGround(true);
+} 
+}
 // Move
 y += ySpd;
