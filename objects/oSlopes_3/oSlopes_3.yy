@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oSlopes_1",
+  "%Name":"oSlopes_3",
   "eventList":[],
   "managed":true,
-  "name":"oSlopes_1",
+  "name":"oSlopes_3",
   "overriddenProperties":[],
   "parent":{
     "name":"placeholder",
@@ -31,12 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sSlopes_1",
-    "path":"sprites/sSlopes_1/sSlopes_1.yy",
+    "name":"sSlopes_3",
+    "path":"sprites/sSlopes_3/sSlopes_3.yy",
   },
   "spriteMaskId":{
-    "name":"sSlopes_1",
-    "path":"sprites/sSlopes_1/sSlopes_1.yy",
+    "name":"sSlopes_3",
+    "path":"sprites/sSlopes_3/sSlopes_3.yy",
   },
   "visible":true,
 }
