@@ -5,6 +5,7 @@ function setOnGround(_val = true){
 		coyoteHangTimer = coyoteHangFrames;
 	} else {
 		onGround = false;
+		myFloorePlatform=noone;
 		coyoteHangTimer = 0;
 	}
 }
@@ -44,3 +45,8 @@ ySpd = 0;
 	
 	framesbo =10;
 	timerbo =0;
+	
+//moving platform
+myFloorePlatform=noone;
+movePlatXSpd=0;
+movePlatMaxYSped=termVel;

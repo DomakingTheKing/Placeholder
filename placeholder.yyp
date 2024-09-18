@@ -20,6 +20,8 @@
   "resources":[
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
+    {"id":{"name":"oSemiSolidMovePlat","path":"objects/oSemiSolidMovePlat/oSemiSolidMovePlat.yy",},},
+    {"id":{"name":"oSemiSolidWall","path":"objects/oSemiSolidWall/oSemiSolidWall.yy",},},
     {"id":{"name":"oSlopes_1","path":"objects/oSlopes_1/oSlopes_1.yy",},},
     {"id":{"name":"oSlopes_2","path":"objects/oSlopes_2/oSlopes_2.yy",},},
     {"id":{"name":"oSlopes_3","path":"objects/oSlopes_3/oSlopes_3.yy",},},
@@ -36,6 +38,8 @@
     {"id":{"name":"sPlayerIdle","path":"sprites/sPlayerIdle/sPlayerIdle.yy",},},
     {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},},
     {"id":{"name":"sPlayerWalk","path":"sprites/sPlayerWalk/sPlayerWalk.yy",},},
+    {"id":{"name":"sSemiSolidMovePlat","path":"sprites/sSemiSolidMovePlat/sSemiSolidMovePlat.yy",},},
+    {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
     {"id":{"name":"sSlopes_1","path":"sprites/sSlopes_1/sSlopes_1.yy",},},
     {"id":{"name":"sSlopes_2","path":"sprites/sSlopes_2/sSlopes_2.yy",},},
     {"id":{"name":"sSlopes_3","path":"sprites/sSlopes_3/sSlopes_3.yy",},},
@@ -48,8 +52,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
-    {"roomId":{"name":"Main","path":"rooms/Main/Main.yy",},},
     {"roomId":{"name":"Room1_1","path":"rooms/Room1_1/Room1_1.yy",},},
+    {"roomId":{"name":"Main","path":"rooms/Main/Main.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
   ],
   "templateType":"game",

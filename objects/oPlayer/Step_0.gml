@@ -142,6 +142,7 @@ if (ySpd <= 0){
 	    while (!place_meeting(x, y + _pixelCheck, oWall)) {
 	        y += _pixelCheck;
 	    }
+	}
 
 	    // Bonk code(OPTIONAL)
 	    if (ySpd < 0) {
@@ -150,35 +151,72 @@ if (ySpd <= 0){
 
 	    // Set ySpd to zero to "collide"
 	    ySpd = 0;
-	}
   }
 }
 
-//downwars y collison
-if (ySpd >= 0){ 
-	
-	
-	if (place_meeting(x, y + ySpd, oWall)) {
-	    // Scoot up to wall precisely
-	    var _pixelCheck = _subPixel * sign(ySpd);
-	    while (!place_meeting(x, y + _pixelCheck, oWall)) {
-	        y += _pixelCheck;
-	    }
+//Floor y collison
 
-	    // Bonk code(OPTIONAL)
-	    if (ySpd < 0) {
-	        jumpHoldTimer = 0;
-	    }
+var _clampYSpd = max(0 , ySpd);
+var _list = ds_list_create() //	create a DS list to store all the object we run into
+var _array=array_create(0);
+array_push(_array, oWall, oSemiSolidWall);
 
-	    // Set ySpd to zero to "collide"
-	    ySpd = 0;
+//do the actual check e add object to the list
+var _listSize=instance_place_list(x, y+1 + _clampYSpd + movePlatMaxYSped ,_array, _list, false);
+
+//loop trought the cooliding istance  and only return one if it's top is below of player 
+for(var i=0; i<_listSize; i++){
+	
+	//get an istance of wall ora semisolid Wall
+	var _listInst=ds_list_find_value(_list,i);
+
+	//avoid magnetism
+	if (_listInst.ySpd <= ySpd || instance_exists(myFloorePlatform))
+	&& (_listInst.ySpd>0 || place_meeting(x,y+1+_clampYSpd,_listInst)){
+		//return a solid wall o any semisold walls there are below the player
+		if _listInst.object_index==oWall
+		|| object_is_ancestor(_listInst.object_index, oWall)
+		|| floor(bbox_bottom)<=ceil(_listInst.bbox_top-_listInst.ySpd){
+		
+			//Return the "highest wall object"
+			if !instance_exists(myFloorePlatform)
+			|| _listInst.bbox_top + _listInst.ySpd <= myFloorePlatform.bbox_top + myFloorePlatform.ySpd
+			|| _listInst.bbox_top + _listInst.ySpd <= bbox_bottom{
+		
+				myFloorePlatform=_listInst;		
+			}
+		}
 	}
-
-	// Set if on ground
-	if (place_meeting(x, y + 1, oWall)) {
-	    setOnGround(true);
-		timerbo=0;
-} 
 }
+//Destroy the DS list to avoid a memory leak
+ds_list_destroy(_list);
+
+//One last check to make sure the floor platform is actually below us
+if instance_exists(myFloorePlatform) && !place_meeting(x,y+movePlatMaxYSped,myFloorePlatform){
+	myFloorePlatform=noone;
+}
+
+//land on the ground platform if there is one
+if instance_exists(myFloorePlatform){
+	
+	//Scoot up to our wall precisely
+	var _subPixel = .5;
+	while !place_meeting(x,y+_subPixel,myFloorePlatform) && !place_meeting(x,y,oWall){
+		y += _subPixel;
+	}
+	//make sure we don?t end up below the top of a semisolid
+	if myFloorePlatform.object_index == oSemiSolidWall || object_is_ancestor(myFloorePlatform.object_index, oSemiSolidWall){
+		while place_meeting(x,y,myFloorePlatform){
+			y -= _subPixel;
+		}	
+	}
+	//Floor the y variables
+	y = floor(y);
+	
+	//Collide with the ground
+	ySpd=0;
+	setOnGround(true);
+}
+
 // Move
 y += ySpd;
