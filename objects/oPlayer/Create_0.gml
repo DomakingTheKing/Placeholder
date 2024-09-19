@@ -10,7 +10,7 @@ function setOnGround(_val = true){
 	}
 }
 
-
+depth=-30;
 
 
 //Controls setup

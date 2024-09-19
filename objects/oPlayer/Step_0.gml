@@ -120,7 +120,7 @@ if (ySpd <= 0){
 		var _slopeSide=false;
 		//Jump into soped ceilings
 		//lide UpLeft slope
-		if xSpd == 0 && !place_meeting(x - abs(ySpd)-1, y + ySpd, oWall) && timerbo!=framesbo{
+		if xSpd == 0 && !place_meeting(x - abs(ySpd)-1, y + ySpd, oWall){
 			while place_meeting(x, y + ySpd, oWall){
 				x -= 1;
 				_slopeSide=true;
@@ -128,7 +128,7 @@ if (ySpd <= 0){
 			timerbo++;
 		}
 		
-		if xSpd == 0 && !place_meeting(x + abs(ySpd)+1, y + ySpd, oWall)  && timerbo!=framesbo{
+		if xSpd == 0 && !place_meeting(x + abs(ySpd)+1, y + ySpd, oWall){
 			while place_meeting(x, y + ySpd, oWall){
 				x += 1;
 				_slopeSide=true;
@@ -142,9 +142,10 @@ if (ySpd <= 0){
 	    while (!place_meeting(x, y + _pixelCheck, oWall)) {
 	        y += _pixelCheck;
 	    }
-	}
 
-	    // Bonk code(OPTIONAL)
+
+	}
+			    //Bonk code(OPTIONAL)
 	    if (ySpd < 0) {
 	       jumpHoldTimer = 0;
 	    }
@@ -220,3 +221,53 @@ if instance_exists(myFloorePlatform){
 
 // Move
 y += ySpd;
+
+// final moving platform collision e movment
+//Move whit move plat xSpd
+var movePlatMaxXSpd=0;
+if instance_exists(myFloorePlatform){ movePlatMaxXSpd = myFloorePlatform.movePlatXSpd;}
+
+if place_meeting(x+movePlatXSpd,y,oWall){
+				
+				var _pixelCheck=.5;
+				var _pixelCheck = _subPixel * sign(movePlatMaxXSpd);
+				
+				while(!place_meeting(x + _pixelCheck, y, oWall)) {
+					x += _pixelCheck;
+				}
+
+				movePlatXSpd=0;
+}
+x += movePlatXSpd;
+//X movePlatXSpd and collision
+// 
+
+	//Y - snap my floor to myFloorePlatform
+if instance_exists(myFloorePlatform)
+&& (myFloorePlatform.object_index == oSemiSolidMovePlat
+|| object_is_ancestor(myFloorePlatform.object_index, oSemiSolidMovePlat)){
+
+	//Snap to the top of the platform (un-floor our y variabile so it's not chopp)
+	if !place_meeting(x, myFloorePlatform.bbox_top, oWall)
+	&& myFloorePlatform.bbox_top >= bbox_bottom-movePlatMaxYSped{
+	
+		y=myFloorePlatform.bbox_top
+		
+	}
+	
+	setOnGround(false)
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
