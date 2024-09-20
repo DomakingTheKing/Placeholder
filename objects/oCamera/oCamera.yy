@@ -10,8 +10,8 @@
   "name":"oCamera",
   "overriddenProperties":[],
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"main",
+    "path":"folders/objects/main.yy",
   },
   "parentObjectId":null,
   "persistent":true,

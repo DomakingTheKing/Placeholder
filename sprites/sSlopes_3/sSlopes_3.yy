@@ -44,8 +44,8 @@
   },
   "origin":0,
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"slopes",
+    "path":"folders/res/tex/sprite/slopes.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

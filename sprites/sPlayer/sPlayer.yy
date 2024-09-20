@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"sprite",
+    "path":"folders/res/tex/sprite.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

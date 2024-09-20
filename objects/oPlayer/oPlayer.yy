@@ -9,8 +9,8 @@
   "name":"oPlayer",
   "overriddenProperties":[],
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"main",
+    "path":"folders/objects/main.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -36,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPlayerIdle",
-    "path":"sprites/sPlayerIdle/sPlayerIdle.yy",
+    "name":"sPlayer",
+    "path":"sprites/sPlayer/sPlayer.yy",
   },
   "spriteMaskId":null,
   "visible":true,

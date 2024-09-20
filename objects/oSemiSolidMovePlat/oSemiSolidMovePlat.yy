@@ -9,8 +9,8 @@
   "name":"oSemiSolidMovePlat",
   "overriddenProperties":[],
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"platforms",
+    "path":"folders/objects/construction/platforms.yy",
   },
   "parentObjectId":{
     "name":"oSemiSolidWall",
