@@ -223,14 +223,19 @@ if instance_exists(myFloorePlatform){
 y += ySpd;
 
 // final moving platform collision e movment
+
+
+//X movePlatXSpd and collision
 //Move whit move plat xSpd
-var movePlatMaxXSpd=0;
-if instance_exists(myFloorePlatform){ movePlatMaxXSpd = myFloorePlatform.movePlatXSpd;}
+
+
+movePlatXSpd=0;
+if instance_exists(myFloorePlatform){ movePlatXSpd = myFloorePlatform.xSpd;}
 
 if place_meeting(x+movePlatXSpd,y,oWall){
 				
 				var _pixelCheck=.5;
-				var _pixelCheck = _subPixel * sign(movePlatMaxXSpd);
+				var _pixelCheck = _subPixel * sign(movePlatXSpd);
 				
 				while(!place_meeting(x + _pixelCheck, y, oWall)) {
 					x += _pixelCheck;
@@ -238,13 +243,15 @@ if place_meeting(x+movePlatXSpd,y,oWall){
 
 				movePlatXSpd=0;
 }
+
 x += movePlatXSpd;
-//X movePlatXSpd and collision
-// 
+
+
 
 	//Y - snap my floor to myFloorePlatform
 if instance_exists(myFloorePlatform)
-&& (myFloorePlatform.object_index == oSemiSolidMovePlat
+&& (myFloorePlatform.ySpd != 0
+|| myFloorePlatform.object_index == oSemiSolidMovePlat
 || object_is_ancestor(myFloorePlatform.object_index, oSemiSolidMovePlat)){
 
 	//Snap to the top of the platform (un-floor our y variabile so it's not chopp)
@@ -254,11 +261,10 @@ if instance_exists(myFloorePlatform)
 		y=myFloorePlatform.bbox_top
 		
 	}
-	
-	setOnGround(false)
+
 }
 
-	
+
 	
 	
 	
