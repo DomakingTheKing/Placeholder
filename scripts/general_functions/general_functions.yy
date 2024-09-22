@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"general_functions",
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"scripts",
+    "path":"folders/scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

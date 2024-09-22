@@ -6,8 +6,8 @@
   "name":"oSlopes_3",
   "overriddenProperties":[],
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"slopes",
+    "path":"folders/objects/construction/slopes.yy",
   },
   "parentObjectId":{
     "name":"oSlopes",

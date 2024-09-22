@@ -17,8 +17,8 @@
   ],
   "name":"rmInit",
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"rooms",
+    "path":"folders/rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

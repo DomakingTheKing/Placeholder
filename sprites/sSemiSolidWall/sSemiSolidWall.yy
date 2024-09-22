@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"walls",
+    "path":"folders/res/tex/sprite/walls.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

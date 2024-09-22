@@ -8,8 +8,8 @@
   "name":"oWall",
   "overriddenProperties":[],
   "parent":{
-    "name":"placeholder",
-    "path":"placeholder.yyp",
+    "name":"walls",
+    "path":"folders/objects/construction/walls.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -34,5 +34,5 @@
     "path":"sprites/sWall/sWall.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
