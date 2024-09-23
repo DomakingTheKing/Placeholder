@@ -79,8 +79,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
-    {"roomId":{"name":"Main_menu","path":"rooms/Main_menu/Main_menu.yy",},},
     {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
+    {"roomId":{"name":"Main_menu","path":"rooms/Main_menu/Main_menu.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
