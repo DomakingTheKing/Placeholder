@@ -9,7 +9,7 @@ if !instance_exists(oPlayer) exit;
 
 //Get camera size and apply zoom
 var _camWidth = camera_get_view_width(view_camera[0]);
-var _camHeight = camera_get_view_height(view_camera[0]);
+var _camHeight = camera_get_view_height(view_camera[0])+50;
 
 //Get camera target coords
 var _camX = oPlayer.x - _camWidth/2;
