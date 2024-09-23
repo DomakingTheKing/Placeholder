@@ -37,6 +37,7 @@
   },
   "name":"placeholder",
   "resources":[
+
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oSemiSolidMovePlat","path":"objects/oSemiSolidMovePlat/oSemiSolidMovePlat.yy",},},
@@ -49,8 +50,10 @@
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"id":{"name":"general_functions","path":"scripts/general_functions/general_functions.yy",},},
+
     {"id":{"name":"sOverworld","path":"sprites/sOverworld/sOverworld.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+
     {"id":{"name":"sSemiSolidMovePlat","path":"sprites/sSemiSolidMovePlat/sSemiSolidMovePlat.yy",},},
     {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
     {"id":{"name":"sSlopes_1","path":"sprites/sSlopes_1/sSlopes_1.yy",},},
