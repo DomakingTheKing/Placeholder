@@ -38,7 +38,12 @@
   },
   "name":"placeholder",
   "resources":[
+<<<<<<< Updated upstream
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
+=======
+    {"id":{"name":"Object10","path":"objects/Object10/Object10.yy",},},
+    {"id":{"name":"Object11","path":"objects/Object11/Object11.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oSemiSolidMovePlat","path":"objects/oSemiSolidMovePlat/oSemiSolidMovePlat.yy",},},
@@ -53,9 +58,14 @@
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"id":{"name":"general_functions","path":"scripts/general_functions/general_functions.yy",},},
+    {"id":{"name":"sNemico","path":"sprites/sNemico/sNemico.yy",},},
     {"id":{"name":"sOverworld","path":"sprites/sOverworld/sOverworld.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+<<<<<<< Updated upstream
     {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},},
+=======
+    {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},},
+>>>>>>> Stashed changes
     {"id":{"name":"sSemiSolidMovePlat","path":"sprites/sSemiSolidMovePlat/sSemiSolidMovePlat.yy",},},
     {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
     {"id":{"name":"sSlopes_1","path":"sprites/sSlopes_1/sSlopes_1.yy",},},
