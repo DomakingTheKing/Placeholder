@@ -16,7 +16,14 @@ depth=-30;
 //Controls setup
 controlsSetup();
 
+//Sprites
+maskSpr = sPlayer;
+idleSpr = sPlayer;
+walkSpr = sPlayerWalk;
+jumpSpr = sPlayerJump;
+
 //Moving
+face = 1;
 moveDir = 0; // 0 = still, -1 = sx, 1 = dx
 moveSpd = 2;
 xSpd = 0;
