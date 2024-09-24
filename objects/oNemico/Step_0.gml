@@ -1,5 +1,5 @@
-if place_meeting(x,y,oSpada){
- pv-=100;
+if place_meeting(x,y,oSpada) && oSpada.sprite_index==sSpada{
+ pv-=1;
 }
 
 if pv<=0{

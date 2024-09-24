@@ -66,6 +66,7 @@
     {"id":{"name":"sSlopes_3","path":"sprites/sSlopes_3/sSlopes_3.yy",},},
     {"id":{"name":"sSlopes","path":"sprites/sSlopes/sSlopes.yy",},},
     {"id":{"name":"sSpada","path":"sprites/sSpada/sSpada.yy",},},
+    {"id":{"name":"sSpadaNoColli","path":"sprites/sSpadaNoColli/sSpadaNoColli.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
     {"id":{"name":"tOverworld","path":"tilesets/tOverworld/tOverworld.yy",},},
   ],
