@@ -11,8 +11,9 @@ function setOnGround(_val = true){
 }
 
 depth=-30;
-
-
+pv=100;
+invulmerability=false;
+invulme_timer=0;
 //Controls setup
 controlsSetup();
 
