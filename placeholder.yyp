@@ -10,6 +10,7 @@
   },
   "defaultScriptType":1,
   "Folders":[
+    {"$GMFolder":"","%Name":"menu","folderPath":"folders/menu.yy","name":"menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objects","folderPath":"folders/objects.yy","name":"objects","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"construction","folderPath":"folders/objects/construction.yy","name":"construction","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"platforms","folderPath":"folders/objects/construction/platforms.yy","name":"platforms","resourceType":"GMFolder","resourceVersion":"2.0",},
@@ -39,7 +40,9 @@
   },
   "name":"placeholder",
   "resources":[
+    {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
+    {"id":{"name":"oNemico","path":"objects/oNemico/oNemico.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oSemiSolidMovePlat","path":"objects/oSemiSolidMovePlat/oSemiSolidMovePlat.yy",},},
     {"id":{"name":"oSemiSolidWall","path":"objects/oSemiSolidWall/oSemiSolidWall.yy",},},
@@ -47,21 +50,33 @@
     {"id":{"name":"oSlopes_2","path":"objects/oSlopes_2/oSlopes_2.yy",},},
     {"id":{"name":"oSlopes_3","path":"objects/oSlopes_3/oSlopes_3.yy",},},
     {"id":{"name":"oSlopes","path":"objects/oSlopes/oSlopes.yy",},},
+    {"id":{"name":"oSpada","path":"objects/oSpada/oSpada.yy",},},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},},
+
     {"id":{"name":"Graveyard","path":"rooms/Graveyard/Graveyard.yy",},},
+
+    {"id":{"name":"title_menu","path":"objects/title_menu/title_menu.yy",},},
+    {"id":{"name":"Main_menu","path":"rooms/Main_menu/Main_menu.yy",},},
     {"id":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
     {"id":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"id":{"name":"general_functions","path":"scripts/general_functions/general_functions.yy",},},
+    {"id":{"name":"sNemico","path":"sprites/sNemico/sNemico.yy",},},
     {"id":{"name":"sOverworld","path":"sprites/sOverworld/sOverworld.yy",},},
     {"id":{"name":"sPlayer","path":"sprites/sPlayer/sPlayer.yy",},},
+
     {"id":{"name":"sPlayerJump","path":"sprites/sPlayerJump/sPlayerJump.yy",},},
     {"id":{"name":"sPlayerWalk","path":"sprites/sPlayerWalk/sPlayerWalk.yy",},},
+
+    {"id":{"name":"Sprite10","path":"sprites/Sprite10/Sprite10.yy",},},
+
     {"id":{"name":"sSemiSolidMovePlat","path":"sprites/sSemiSolidMovePlat/sSemiSolidMovePlat.yy",},},
     {"id":{"name":"sSemiSolidWall","path":"sprites/sSemiSolidWall/sSemiSolidWall.yy",},},
     {"id":{"name":"sSlopes_1","path":"sprites/sSlopes_1/sSlopes_1.yy",},},
     {"id":{"name":"sSlopes_2","path":"sprites/sSlopes_2/sSlopes_2.yy",},},
     {"id":{"name":"sSlopes_3","path":"sprites/sSlopes_3/sSlopes_3.yy",},},
     {"id":{"name":"sSlopes","path":"sprites/sSlopes/sSlopes.yy",},},
+    {"id":{"name":"sSpada","path":"sprites/sSpada/sSpada.yy",},},
+    {"id":{"name":"sSpadaNoColli","path":"sprites/sSpadaNoColli/sSpadaNoColli.yy",},},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},},
     {"id":{"name":"tOverworld","path":"tilesets/tOverworld/tOverworld.yy",},},
   ],
@@ -69,6 +84,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rmInit","path":"rooms/rmInit/rmInit.yy",},},
+    {"roomId":{"name":"Main_menu","path":"rooms/Main_menu/Main_menu.yy",},},
     {"roomId":{"name":"Test","path":"rooms/Test/Test.yy",},},
     {"roomId":{"name":"Graveyard","path":"rooms/Graveyard/Graveyard.yy",},},
   ],
