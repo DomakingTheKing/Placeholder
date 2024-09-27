@@ -3,6 +3,16 @@ if place_meeting(x,y,oNemico) && oNemico.image_index==0 && invulmerability == fa
  invulmerability = true;
 }
 
+if place_meeting(x,y,oBombe) && invulmerability == false{
+ pv-=30;
+ invulmerability = true;
+}
+
+if place_meeting(x,y,oBoss) && invulmerability == false{
+ pv-=10;
+ invulmerability = true;
+}
+
 if invulmerability && invulme_timer<30{invulme_timer+=1;}
 else{invulmerability = false; invulme_timer=0;}
 

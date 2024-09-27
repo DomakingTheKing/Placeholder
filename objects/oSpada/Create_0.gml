@@ -3,4 +3,5 @@ image_index=0;
 timer=60;
 sprite_index=sSpadaNoColli;
 spadaNoColli=sSpadaNoColli;
-spada=sSpada
+spada=sSpadaDx
+lato=oPlayer.face;

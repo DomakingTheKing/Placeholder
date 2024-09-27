@@ -1,4 +1,4 @@
-if instance_place(x,y,oSpada) && oSpada.sprite_index==sSpada{
+if place_meeting(x,y,oSpada){
  pv-=1;
 }
 
@@ -182,4 +182,7 @@ xSpd = moveDir * moveSpd;
 if pv<=0{
 	image_index=1;
 	 moveDir=0;
+	 instance_destroy();
+	 oVittoria.nemici=oVittoria.nemici-1;
+	 
 }
